@@ -1,16 +1,19 @@
 module MemoUtils.CodeGen.Markdown where
 
-import MemoUtils.DataTypes
+import           Control.Monad
+import           MemoUtils.CodeGen.Markdown.DataTypes
+import           System.Directory
 
-data TocItem = TocItem { title :: String
-                       , link :: String
-                       }
-
-type Toc = Tree TocItem
-
-singletonToc :: TocItem -> Toc
-singletonToc item = Fix ( NodeF { node = item
-                                , children = []
-                                }
-                        )
-
+genToc :: FilePath -> IO [Toc]
+genToc fp = do
+  childFPs <- listDirectory fp
+  forM childFPs $ \childFP -> do
+    let st = singletonToc $ TocItem { title = childFP
+                                    , link = childFP
+                                    }
+    de <- doesDirectoryExist childFP
+    if de
+      then do
+      childTocs <- genToc childFP
+      return $ st `andChildren` childTocs
+      else return st

@@ -1,2 +1,4 @@
+import MemoUtils.CodeGen.Markdown
+
 main :: IO ()
-main = undefined
+main = genToc "/home/kj/Lab/personal/memo" >>= return . fmap show >>= print
