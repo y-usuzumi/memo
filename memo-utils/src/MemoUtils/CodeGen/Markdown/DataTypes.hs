@@ -1,15 +1,17 @@
 module MemoUtils.CodeGen.Markdown.DataTypes where
 
-import           MemoUtils.DataTypes (TreeF, Tree)
+import           Language.Haskell.TH.Syntax
+import           MemoUtils.DataTypes
 import           Text.Show.Deriving
 
 data TocItem = TocItem { title :: String
                        , link  :: String
                        } deriving Show
 
+type TocF = TreeF TocItem
 type Toc = Tree TocItem
 
-$(deriveShow1 (TreeF TocItem))
+$(deriveShow1 ''TreeF)
 
 
 singletonToc :: TocItem -> Toc

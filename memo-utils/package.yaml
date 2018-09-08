@@ -24,12 +24,14 @@ dependencies:
 - deriving-compat
 - directory
 - recursion-schemes
+- template-haskell
 
 default-extensions:
 - DeriveAnyClass
 - DeriveFunctor
 - RecursiveDo
 - StandaloneDeriving
+- QuasiQuotes
 - TemplateHaskell
 
 library:
