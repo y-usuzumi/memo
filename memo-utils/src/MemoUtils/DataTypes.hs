@@ -1,5 +1,6 @@
-module MemoUtils.DataTypes ( module MemoUtils.DataTypes
-                           , module Data.Functor.Foldable
+module MemoUtils.DataTypes ( module Data.Functor.Foldable
+                           , TreeF (..)
+                           , Tree
                            ) where
 
 import           Data.Functor.Classes
