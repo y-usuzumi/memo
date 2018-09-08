@@ -21,12 +21,16 @@ description:         Please see the README on GitHub at <https://github.com/y-us
 
 dependencies:
 - base >= 4.7 && < 5
+- deriving-compat
 - directory
 - recursion-schemes
 
 default-extensions:
+- DeriveAnyClass
 - DeriveFunctor
 - RecursiveDo
+- StandaloneDeriving
+- TemplateHaskell
 
 library:
   source-dirs: src
