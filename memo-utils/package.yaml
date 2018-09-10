@@ -23,6 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - deriving-compat
 - directory
+- filepath
 - recursion-schemes
 - template-haskell
 
