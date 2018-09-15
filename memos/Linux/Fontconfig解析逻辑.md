@@ -17,8 +17,6 @@ pattern是各种字体属性 (font property) 的集合，比如family, familylan
 
 Fontconfig通过解析配置，逐步修改pattern中每个属性的值，最后进行距离的计算。
 
-## Fontconfig通过计算pattern和系统中各个字体的距离进行选择，选取距离最近的字体作为最终的字体。
-
 pattern是各种字体属性 (font property) 的集合，比如family, familylang, slant, weight, hinting等。每个属性的值都可以为多个，比如family, lang，排在前面的被认为是距离更近的，但是有一个特例，family被分为强绑定 (strong) 和弱绑定 (weak) 两种，强绑定的优先级比lang更高，弱绑定的优先级比lang更低。
 
 Fontconfig通过解析配置，逐步修改pattern中每个属性的值，最后进行距离的计算。
