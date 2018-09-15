@@ -34,7 +34,7 @@ genToc fp = do
   childFPs <- listDirectory fp
   forM childFPs $ \name -> do
     let childFP = fp </> name
-    let st = singletonToc $ TocItem { title = childFP
+    let st = singletonToc $ TocItem { title = name
                                     , link = childFP
                                     }
     de <- doesDirectoryExist childFP
