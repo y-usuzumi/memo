@@ -23,7 +23,9 @@ opts = info (argsParser <**> helper)
 run :: Args -> IO ()
 run Args{..} = genToc pred dir >>= putStrLn . renderTocs
   where
-    pred = return . (== ".md") . takeExtension
+    pred fp =
+      (||) <$> doesDirectoryExist fp <*> (return . (== ".md") . takeExtension) fp
+
 
 
 main :: IO ()
