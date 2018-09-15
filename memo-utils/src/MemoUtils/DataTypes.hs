@@ -1,5 +1,6 @@
 module MemoUtils.DataTypes where
 
+import           Control.Arrow
 import           Control.Monad
 import           Data.Functor.Foldable
 import           Data.Tree
@@ -29,10 +30,10 @@ andChildren toc children = Fix $
   (unfix toc){children=children
              }
 
-genToc :: FilePath -> IO [Toc]
-genToc fp = do
-  childFPs <- listDirectory fp
-  forM childFPs $ \name -> do
+genToc :: (FilePath -> IO Bool) -> FilePath -> IO [Toc]
+genToc pred fp = do
+  childFPs <- map (id &&& (fp </>)) <$> listDirectory fp >>= filterM (pred . snd)
+  forM childFPs $ \(name, fullName) -> do
     let childFP = fp </> name
     let st = singletonToc $ TocItem { title = name
                                     , link = childFP
@@ -40,7 +41,7 @@ genToc fp = do
     de <- doesDirectoryExist childFP
     if de
       then do
-      childTocs <- genToc childFP
+      childTocs <- genToc pred childFP
       return $ st `andChildren` childTocs
       else
       return st

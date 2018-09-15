@@ -12,3 +12,6 @@ renderToc toc =
   intercalate "\n" $ flip cata toc $ \(NodeF node children) ->
                     printf "* [%s](%s)" (title node) (link node) :
                     map ("  " ++) (join children)
+
+renderTocs :: [Toc] -> String
+renderTocs = intercalate "\n" . map renderToc

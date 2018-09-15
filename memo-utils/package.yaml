@@ -25,11 +25,13 @@ dependencies:
 - directory
 - filepath
 - recursion-schemes
+- optparse-applicative
 - template-haskell
 
 default-extensions:
 - DeriveAnyClass
 - DeriveFunctor
+- RecordWildCards
 - RecursiveDo
 - StandaloneDeriving
 - QuasiQuotes
@@ -39,7 +41,7 @@ library:
   source-dirs: src
 
 executables:
-  memo-utils-readme-gen:
+  memo-utils-gen-toc:
     main:                ReadmeGen/Main.hs
     source-dirs:         app
     ghc-options:
