@@ -7,11 +7,19 @@ import           Data.Tree
 import           MemoUtils.DataTypes
 import           Text.Printf
 
-renderToc :: Toc -> String
-renderToc toc =
-  intercalate "\n" $ flip cata toc $ \(NodeF node children) ->
-                    printf "* [%s](%s)" (title node) (link node) :
-                    map ("  " ++) (join children)
+data RenderOptions = RenderOptions { excludeEmptyDirs :: Bool
+                                   }
 
-renderTocs :: [Toc] -> String
-renderTocs = intercalate "\n" . map renderToc
+renderToc :: RenderOptions -> Toc -> String
+renderToc RenderOptions{..} toc =
+  intercalate "\n" $ flip cata toc $ \(NodeF TocItem{..} children) ->
+  case type_ of
+    Directory ->
+      if excludeEmptyDirs && null (join children)
+      then []
+      else printf "* [%s](%s)" title link :
+           map ("  " ++) (join children)
+    File -> [printf "* [%s](%s)" title link]
+
+renderTocs :: RenderOptions -> [Toc] -> String
+renderTocs opts = intercalate "\n" . filter (/= "") . map (renderToc opts)
