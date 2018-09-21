@@ -42,7 +42,7 @@ library:
 
 executables:
   memo-utils-gen-toc:
-    main:                ReadmeGen/Main.hs
+    main:                TocGen/Main.hs
     source-dirs:         app
     ghc-options:
     - -threaded
