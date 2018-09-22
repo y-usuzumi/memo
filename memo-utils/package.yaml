@@ -27,6 +27,7 @@ dependencies:
 - recursion-schemes
 - optparse-applicative
 - template-haskell
+- uri-encode
 
 default-extensions:
 - DeriveAnyClass

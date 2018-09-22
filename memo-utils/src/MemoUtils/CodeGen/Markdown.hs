@@ -5,6 +5,7 @@ import           Data.Functor.Foldable
 import           Data.List
 import           Data.Tree
 import           MemoUtils.DataTypes
+import           Network.URI.Encode
 import           Text.Printf
 
 data RenderOptions = RenderOptions { excludeEmptyDirs :: Bool
@@ -17,9 +18,9 @@ renderToc RenderOptions{..} toc =
     Directory ->
       if excludeEmptyDirs && null (join children)
       then []
-      else printf "* [%s](%s)" title link :
+      else printf "* [%s](%s)" title (encode link) :
            map ("  " ++) (join children)
-    File -> [printf "* [%s](%s)" title link]
+    File -> [printf "* [%s](%s)" title (encode link)]
 
 renderTocs :: RenderOptions -> [Toc] -> String
 renderTocs opts = intercalate "\n" . filter (/= "") . map (renderToc opts)
