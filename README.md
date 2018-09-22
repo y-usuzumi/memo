@@ -11,3 +11,4 @@
   * [Fontconfig解析逻辑.md](memos%2FLinux%2FFontconfig%E8%A7%A3%E6%9E%90%E9%80%BB%E8%BE%91.md)
 * [Haskell](memos%2FHaskell)
   * [RecursionSchemes.md](memos%2FHaskell%2FRecursionSchemes.md)
+  * [异常处理.md](memos%2FHaskell%2F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.md)
