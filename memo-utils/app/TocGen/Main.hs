@@ -12,8 +12,11 @@ data Args = Args { dir              :: FilePath
 argsParser :: Parser Args
 argsParser = Args
   <$> argument str ( metavar "dir"
+                   <> help "The root directory to look for contents"
                    )
-  <*> flag False True (short 'x')
+  <*> flag False True (short 'x'
+                      <> help "Exclude directories that do not have files (recursively)"
+                      )
 
 opts :: ParserInfo Args
 opts = info (argsParser <**> helper)
