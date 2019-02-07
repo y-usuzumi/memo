@@ -40,7 +40,7 @@ D# C7
 F G
 ----------
 C F G C
-Am D G
+Am D Gsus4 G
 C F E Am
 F C Dm Em
 Dm-Em F G
@@ -54,7 +54,10 @@ Am D G
 C F G
 Am D G
 
-B G# Gm G# D# G#? G# A# B C# D# F
+========
+-
+========
+Bb G# Gm G#m G# Ab B C# D# F
 
 ========
 = 4
