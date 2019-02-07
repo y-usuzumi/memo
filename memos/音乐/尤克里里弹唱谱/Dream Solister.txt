@@ -54,7 +54,7 @@ Am D G
 C F G
 Am D G
 
-有问题：D# G# Gm Cm F-Gm G#-A# F
+B G# Gm G# D# G#? G# A# B C# D# F
 
 ========
 = 4
