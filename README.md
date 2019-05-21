@@ -2,6 +2,7 @@
 
 * [Haskell](memos%2FHaskell)
   * [RecursionSchemes.md](memos%2FHaskell%2FRecursionSchemes.md)
+  * [常用库.md](memos%2FHaskell%2F%E5%B8%B8%E7%94%A8%E5%BA%93.md)
   * [异常处理最佳实践.md](memos%2FHaskell%2F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
   * [GHC](memos%2FHaskell%2FGHC)
     * [有关派生.md](memos%2FHaskell%2FGHC%2F%E6%9C%89%E5%85%B3%E6%B4%BE%E7%94%9F.md)
