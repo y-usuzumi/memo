@@ -12,6 +12,8 @@
       * [000_Test.md](memos%2FHaskell%2F%E8%8C%83%E7%95%B4%E8%AE%BA%2Fch%2F000_Test.md)
 * [Linux](memos%2FLinux)
   * [Fontconfig解析逻辑.md](memos%2FLinux%2FFontconfig%E8%A7%A3%E6%9E%90%E9%80%BB%E8%BE%91.md)
+* [计算机科学](memos%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)
+  * [知识点总结（待整理）.md](memos%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%2F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%88%E5%BE%85%E6%95%B4%E7%90%86%EF%BC%89.md)
 * [软件工程](memos%2F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B)
   * [软件测试方法和形式验证.md](memos%2F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%2F%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95%E5%92%8C%E5%BD%A2%E5%BC%8F%E9%AA%8C%E8%AF%81.md)
   * [方法论、典范和实践](memos%2F%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%2F%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%81%E5%85%B8%E8%8C%83%E5%92%8C%E5%AE%9E%E8%B7%B5)
