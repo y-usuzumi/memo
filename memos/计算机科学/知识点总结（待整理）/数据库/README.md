@@ -278,3 +278,14 @@ DONE!
 ```
 
 现在叶子层构成了密集索引。所以B+ Tree比B-Tree更像是多层索引。
+
+叶子节点形成的链表，想象中可以帮助更快地进行范围查询。
+
+> Q: 为什么B+ Tree比B-Tree更适合用作外存索引？
+> A: 由于在B+ Tree中，rp指针仅存在叶子节点上，因此，当以页为单位存储索引时，中间层可以包含更大的出度，存储更多的指针，从而导致树的整体深度进一步降低。
+
+### Clustered index和 Non-clustered index
+
+Non-clustered index是脱离于实际数据存在的单独存放的索引。
+
+Clustered
